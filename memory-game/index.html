@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Game</title>
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -16,6 +17,11 @@
         </header>
 
         <section class="score-panel">
+                <ul class="stars">
+                        <li class="firstStar"><i class="fa fa-star"></i></li>
+                        <li class="secondStar"><i class="fa fa-star"></i></li>
+                        <li class="thirdStar"><i class="fa fa-star"></i></li>
+                </ul>
         	<span class="moves"></span>
                 <div id="timer"></div>
                 <button class="restart">
@@ -93,8 +99,7 @@
 <div class="modal">
         <div class="modal-content">
                 <span class="close">&times;</span>
-                <p class= "scores"> Andy would be proud of you.
-                        
+                <p class= "scores">      
                 </p>
                 <button class="playAgain">Play again</button>
         </div>

@@ -1,18 +1,12 @@
-// card list to shuffle 
-
+// card list to shuffle
 let card = document.querySelectorAll('.card');
 let cans = ['can4', 'can2', 'can3', 'can1', 'can5', 'can6', 'can7', 'can8', 'can1', 'can2', 'can3', 'can4', 'can5', 'can6', 'can7', 'can8'];
 
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
+//  starting and assigning cards to cans
 function start(){
     shuffle(cans),
     cardMatch()
-}
+};
 start();
 
 function cardMatch(){
@@ -42,7 +36,7 @@ function shuffle(array) {
   }
 console.log(cans);
 
-//  adding html to the page
+//  adding card html to the page
 for( var i=0; i<16; i++){
     let place = card[i].lastElementChild;
     place.innerHTML= '<img src="img/' + cans[i] +'.png" alt="can3">';
@@ -65,6 +59,7 @@ for (var i = 0; i < 16; i++){
         }
     })
 };
+
 //flip card   idea how to flip from https://jsfiddle.net/james2doyle/qsQun/
 
 var visible = false;
@@ -89,8 +84,21 @@ let move = 0;
 function countMoves(a){
     let movesNum = document.querySelector('.moves');
     move++;
-    movesNum.innerHTML = move + ' moves'
-}
+    movesNum.innerHTML = move + ' moves';
+    countStars()
+};
+const starOne = document.querySelector('.firstStar');
+
+function countStars(){
+    if(move >= 20 && move <= 50){
+        starOne.style.display = 'none'
+    }
+    else if(move > 50 ){
+        const starTwo = document.querySelector('.secondStar');
+        starTwo.style.display = 'none';
+        starOne.style.display = 'none'
+    }
+ };
 // to check if two cards match
 let matchedCards = [];
 function checkCards(){
@@ -139,20 +147,23 @@ let reloadButton = document.querySelector('.restart');
 reloadButton.addEventListener('click', function(){
     window.location.reload(true);  
 });
+
 // mdn- reload  https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
 
 const modal = document.querySelector('.modal');
 const playAgain = document.querySelector('.playAgain');
 const close = document.getElementsByClassName("close")[0];
 
+// function to display congrats box
+
 function whenFinish(){
     if(matchedCards.length == 16){
-        console.log('you won! in ' + sec + ' seconds and ' + move + ' moves');
         setTimeout(function(){
-        modal.style.display = "block";
-        let scoresMessage = document.querySelector('.scores');
-        scoresMessage.innerHTML = 'You did it in '+ sec + ' seconds \n and ' + move + ' moves';
-        },1500)
+            modal.style.display = "block";
+            let scoresMessage = document.querySelector('.scores');
+            let realSec = sec - 2;
+            scoresMessage.innerHTML = 'You did it in '+ realSec + ' seconds and ' + move + ' moves';
+        }, 1500)
     }
 };
 
@@ -168,4 +179,4 @@ window.onclick = function(event){
     if (event.target == modal) {
         modal.style.display = "none";
     }
-}
+};

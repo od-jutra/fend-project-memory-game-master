@@ -34,6 +34,19 @@ h1 {
     font-size: 70px;
     margin-bottom:15px;
 }
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
 .score-panel{
     display: flex;
     flex-direction: row; 
@@ -154,7 +167,7 @@ h1 {
  /* modal box */
 
 
- .modal {
+.modal {
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -173,14 +186,14 @@ h1 {
     background-color: #d77721;
     border-radius: 50%;
     margin: auto;
-    padding: 10px 6px 10px 12px;
+    padding: 10px 0px 0px 29px;
     width: 170px;
     height: 160px;
     position: relative;
     top: 70px;
     left: 85px;
     font-size: 23px;
-    text-align: right;
+    text-align: center;
     color: #000;
 }
 
