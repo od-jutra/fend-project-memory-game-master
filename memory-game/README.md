@@ -2,19 +2,15 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
+* [Instructions for game](#instructions)
 * [Contributing](#contributing)
 
 ## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Match all cards with their counterparts as quicky as possible. Numbers of moves are also important. As you will play longer, you will loose stars. 
+Warning- this version of the memory game is based on color matching, shape is the same. 
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This project was created on a base of Udacity start set as well some comments in the code are created by Udacity. 
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
