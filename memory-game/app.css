@@ -151,6 +151,110 @@ h1 {
     box-shadow: 4px 4px 15px 0px rgba(211, 81, 42, 0.781);
  }
 
-/*  picture of worhol from
- http://www.pracowniakreska.eu/en/andy-warhol/ */
-/* Campbell's cans-  credits Endy Worhol */
+ /* modal box */
+
+
+ .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(25, 15, 10, 0.6); 
+    background-image: url(img/bigcampbell.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-content {
+    background-color: #d77721;
+    border-radius: 50%;
+    margin: auto;
+    padding: 10px 6px 10px 12px;
+    width: 170px;
+    height: 160px;
+    position: relative;
+    top: 70px;
+    left: 85px;
+    font-size: 23px;
+    text-align: right;
+    color: #000;
+}
+
+.close {
+    color: #5a1c09;
+    float: right;
+    font-size: 80px;
+    font-weight: bold;
+    position: relative;
+    bottom: 35px;
+    left: 35px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 81px;
+}
+
+.playAgain{
+    border: 0;
+    background-color: inherit;
+    box-shadow: 6px 5px 10px 0 rgba(46, 61, 73, 0.5);
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 25px;
+    float: right;
+    position: relative;
+    bottom: 15px;
+    left: 25px;
+}
+
+.modal-content{
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.playAgain:hover{
+    box-shadow: 6px 5px 8px 0 rgba(211, 81, 42, 0.781);
+    font-size: 26px; 
+}
+
+
+/* credits: Campbell's cans-  Endy Worhol */
+
+/* animation  for matched cards*/
+
+@-webkit-keyframes match{
+    0%, 100% {-moz-transform: rotate(0);}
+    50% {-moz-transform: rotate(3deg) ;}
+    75% {-moz-transform: rotate(-3deg) ;}
+}
+
+@-moz-keyframes match{
+    0%, 100% {-moz-transform: rotate(0);}
+    50% {-moz-transform: rotate(3deg) ;}
+    75% {-moz-transform: rotate(-3deg) ;}
+}
+
+@-o-keyframes match{
+    0%, 100% {-moz-transform: rotate(0);}
+    50% {-moz-transform: rotate(3deg) ;}
+    75% {-moz-transform: rotate(-3deg) ;}
+}
+
+@keyframes match{
+    0%, 100% {-moz-transform: rotate(0);}
+    50% {-moz-transform: rotate(3deg) ;}
+    75% {-moz-transform: rotate(-3deg) ;}
+}
+
+.match{
+    -webkit-animation: match 500ms ease-in-out; 
+    -moz-animation: match 500ms ease-in-out;
+    -o-animation: match 500ms ease-in-out;
+    animation: match 500ms ease-in-out;  
+}

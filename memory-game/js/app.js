@@ -118,17 +118,10 @@ function hideCard(i){
 // check the number of matched cards
 
 function ifMatched(){
-    console.log('cards matched!');
-    whenFinish()
+        console.log('cards matched!');
+        whenFinish()
 };
-function whenFinish(){
-    if(matchedCards.length == 16){
-       console.log('you won!');
-       alert('You did it in '+ sec + ' seconds and ' + move+ ' moves');
-    }
-};
-
-
+    
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
@@ -148,3 +141,31 @@ reloadButton.addEventListener('click', function(){
 });
 // mdn- reload  https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
 
+const modal = document.querySelector('.modal');
+const playAgain = document.querySelector('.playAgain');
+const close = document.getElementsByClassName("close")[0];
+
+function whenFinish(){
+    if(matchedCards.length == 16){
+        console.log('you won! in ' + sec + ' seconds and ' + move + ' moves');
+        setTimeout(function(){
+        modal.style.display = "block";
+        let scoresMessage = document.querySelector('.scores');
+        scoresMessage.innerHTML = 'You did it in '+ sec + ' seconds \n and ' + move + ' moves';
+        },1500)
+    }
+};
+
+playAgain.onclick = function(){
+    window.location.reload(true); 
+};
+
+close.onclick = function(){
+    modal.style.display = "none";
+};
+
+window.onclick = function(event){
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
