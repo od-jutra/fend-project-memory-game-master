@@ -12,5 +12,12 @@ Warning- this version of the memory game is based on color matching, shape is th
 
 ## Contributing
 
-This project was created on a base of Udacity start set as well some comments in the code are created by Udacity. 
+This project was created on a base of Udacity start set for memory game.
+
+## Code Dependencies
+
+The app is built with the following code dependencies:
+
+1. Font Awesome
+  font: 'Amatic SC'
 
