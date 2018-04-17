@@ -4,7 +4,7 @@
 
 * [Instructions for game](#instructions)
 * [Contributing](#contributing)
-* [Code Dependencies](#code dependencies)
+* [Code Dependencies](#codedependencies)
 ## Instructions
 
 Match all cards with their counterparts as quicky as possible. Numbers of moves are also important. As you will play longer, you will loose stars. 
